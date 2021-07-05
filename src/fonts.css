@@ -1,0 +1,15 @@
+@font-face {
+    font-family: Ribeye;
+    src: local(Ribeye) url(./assets/fonts/Ribeye/Ribeye-Regular.ttf);
+}
+
+@font-face {
+    font-family: Petrona;
+    src: url(./assets/fonts/Petrona/static/Petrona-Regular.ttf);
+}
+
+@font-face {
+    font-family: Petrona;
+    src: url(./assets/fonts/Petrona/static/Petrona-ExtraBold.ttf);
+    font-weight: 800;
+}
