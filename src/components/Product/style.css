@@ -1,45 +1,17 @@
-:root {
-    --color-primaria: #001429;
-    --color-secundaria: #FF5600;
+.Infos h3 {
+    color: #FF5600;
+    font-size: 3em;
 }
 
-.DivProduct {
-    font-family: 'Petrona';
-    padding: 1em;
-    margin: 2vw 0;
-    box-shadow: 0px 2px 0px 0px #324a64;
-}   
-    .DivProduct:hover {
-        box-shadow: 2px 2px 7px 0px #324a64;
-    }
-    .DivProduct .Infos h3 {
-        color: var(--color-secundaria);
-        font-size: 3em;
-    }
-
-    .DivProduct .Infos p {
-        color: #B1B1B1;
-        font-size: 1em;
-        margin: 5px 0;
-    }
-
-    .DivProduct .Infos span {
-        display: block;
-        margin-top: 10px;
-        font-size: 2em;
-        color: var(--color-secundaria);
-    }
-
-.DivProduct .BtnAddCart button {
-    width: 9vw;
-    padding: 10px;
-    margin: 10px 0;
-    border: none;
+.DivProduct .Infos p {
+    color: #B1B1B1;
     font-size: 1em;
-    color: #fff;
-    background-color: var(--color-secundaria);
+    margin: 5px 0;
 }
-    .DivProduct .BtnAddCart button:hover {
-        cursor: pointer;
-        background-color: #D04600;
-    }
+
+.DivProduct .Infos span {
+    display: block;
+    margin-top: 10px;
+    font-size: 2em;
+    color: #FF5600;
+}

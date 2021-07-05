@@ -1,18 +1,15 @@
 import './style.css';
+import { Fragment } from 'react';
 
-function Product({ id, name, category, price, handleClick }) {
+function Product({ id, name, category, price }) {
     return (
-        <div className="DivProduct">
+        <Fragment>
              <div className="Infos">
                 <h3>{name}</h3>
                 <p>Category: {category}</p>
                 <span>Price: ${price}</span>
             </div>
-
-            <div className="BtnAddCart">
-                <button type="button" onClick={() => handleClick(id)}>Add to cart</button>
-            </div>
-        </div>     
+        </Fragment>     
     );
 }
 

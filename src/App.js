@@ -21,7 +21,8 @@ function App() {
     const [cartTotal, setCartTotal] = useState(0)
 
     function showProducts(textInput) {
-        setProducts([products.filter(product => product.name === textInput)]);
+        setFilteredProducts([products.filter(product => product.name === textInput)]);
+        setProducts([filteredProducts]);
         setTextInput("");
     }
 
