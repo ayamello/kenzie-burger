@@ -4,7 +4,7 @@ function ShowSale(props) {
     const cart = props.cart
     console.log(cart)
     return (
-        <div className="Cart">
+        <div className="CurrentCart">
             {cart.map(item => 
                 <div key={item.id} className="CartProducts">
                     <h3>{item.name}</h3>

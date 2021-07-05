@@ -131,6 +131,7 @@ footer {
         }
         .Tools .SearchBar {
             margin-bottom: 2vh;
+            align-self: flex-end;
         }
             .Tools .SearchBar input {
                 width: 30vw;
