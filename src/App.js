@@ -2,7 +2,6 @@ import { useState } from 'react';
 import './App.css';
 import { Search, ShoppingCart, LinkedIn, GitHub } from '@material-ui/icons';
 import MenuContainer from './components/MenuContainer';
-import Product from './components/Product';
 import ShowSale from './components/ShowSale';
 
 function App() {
@@ -22,11 +21,14 @@ function App() {
     const [currentSale, setCurrentSale] = useState([]);
     const [cartTotal, setCartTotal] = useState(0);
 
+    //a revisar - não funciona
     function showProducts(textInput) {
-        setProducts([products.filter(product => product.name === textInput)]);
+        const filter = products.filter(product => product.name === textInput);
+        setFilteredProducts([filter]);
         setTextInput("");
+        setProducts(filteredProducts);
     }
-
+    
     function handleClick(productId) {
         const currentProduct = products.find(product => product.id === productId);
         const currentTotal = currentSale.reduce((total, product) => total += product.price, currentProduct.price);
