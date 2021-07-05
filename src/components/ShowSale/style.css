@@ -1,0 +1,28 @@
+.Cart {
+    display: flex;
+    flex-wrap: wrap;
+    width: 75%;
+    margin: -2vh auto;
+    font-family: 'Petrona';
+    text-transform: uppercase;
+    color: #FF5600;
+}
+    .Cart .CartProducts {
+        margin-right: 2vw;
+        margin-top: 2vh;
+    }
+    .Cart .CartProducts h3 {
+        color: #FF5600;
+        font-size: 1.5em;
+    }
+    .Cart .CartProducts p {
+        color: #B1B1B1;
+        font-size: 0.8em;
+        margin: 5px 0;
+    }
+    .Cart .CartProducts span {
+        display: block;
+        margin-top: 10px;
+        font-size: 1em;
+        color: #FF5600;
+    }

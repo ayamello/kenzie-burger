@@ -50,7 +50,7 @@
         margin: 3vw auto;
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        display: flex;
     }
 
     .Tools .Cart .BtnCart {
@@ -61,7 +61,6 @@
         border-radius: 50px;
     } 
         .Tools .Cart .BtnCart:hover {
-            cursor: pointer;
             box-shadow: 0px 0px 7px 0px #324a64;
         } 
     .Tools .Cart span {
@@ -70,6 +69,7 @@
         color: #FF5600;
         font-weight: 800;
         margin-left: 1vw;
+        margin-top: 2vh;
     }
 
     .Tools .SearchBar {
@@ -130,7 +130,7 @@ footer {
             align-self: flex-start;
         }
         .Tools .SearchBar {
-            margin-bottom: 5vh;
+            margin-bottom: 2vh;
         }
             .Tools .SearchBar input {
                 width: 30vw;

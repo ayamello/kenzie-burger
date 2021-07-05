@@ -2,6 +2,8 @@ import { useState } from 'react';
 import './App.css';
 import { Search, ShoppingCart, LinkedIn, GitHub } from '@material-ui/icons';
 import MenuContainer from './components/MenuContainer';
+import Product from './components/Product';
+import ShowSale from './components/ShowSale';
 
 function App() {
     const [products, setProducts] = useState([
@@ -17,8 +19,8 @@ function App() {
     const [textInput, setTextInput] = useState("");
     const [filteredProducts, setFilteredProducts] = useState([]);
 
-    const [currentSale, setCurrentSale] = useState([])
-    const [cartTotal, setCartTotal] = useState(0)
+    const [currentSale, setCurrentSale] = useState([]);
+    const [cartTotal, setCartTotal] = useState(0);
 
     function showProducts(textInput) {
         setProducts([products.filter(product => product.name === textInput)]);
@@ -27,11 +29,12 @@ function App() {
 
     function handleClick(productId) {
         const currentProduct = products.find(product => product.id === productId);
-        setCurrentSale([...currentSale, currentProduct]);
-        setCartTotal(currentSale.reduce((total, product) => total += product.price, 0));
+        const currentTotal = currentSale.reduce((total, product) => total += product.price, currentProduct.price);
+        if(!currentSale.includes(currentProduct)) {
+            setCurrentSale([...currentSale, currentProduct]);
+            setCartTotal(currentTotal);
+        }   
     }
-    console.log(currentSale);
-    console.log(cartTotal);
 
     return(
         <div className="App">
@@ -74,6 +77,8 @@ function App() {
                     <button type="button" onClick={() => showProducts(textInput)}><Search/></button>
                 </div>
             </div>
+            
+            <ShowSale cart={currentSale} />
 
             <MenuContainer products={products} handleClick={handleClick} />
 
