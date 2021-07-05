@@ -14,7 +14,7 @@
         box-shadow: 2px 2px 7px 0px #324a64;
     }
     .DivProduct .BtnAddCart button {
-        width: 9vw;
+        width: 112px;
         padding: 10px;
         margin: 10px 0;
         border: none;
@@ -26,3 +26,12 @@
             cursor: pointer;
             background-color: #D04600;
         }
+
+@media (max-width: 597px) {
+    .Products {
+        flex-direction: column;
+    }
+    .DivProduct .BtnAddCart {
+        text-align: right;
+    }
+}

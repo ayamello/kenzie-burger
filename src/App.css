@@ -1,9 +1,5 @@
-:root {
-    --color-primaria: #001429;
-    --color-secundaria: #FF5600;
-}
-
 .App-Header {
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -24,7 +20,7 @@
         justify-content: space-around;
     }
     .App-Header nav ul li {
-        padding: 1rem;
+        padding: 1rem 0;
     }
     .App-Header nav ul li:hover {
         cursor: pointer;
@@ -32,6 +28,7 @@
     }
 
 .Cover {
+    width: 100%;
     height: 90vh;
     display: flex;
     flex-direction: column;
@@ -56,17 +53,24 @@
         align-items: center;
     }
 
-    .Tools .BtnCart {
+    .Tools .Cart .BtnCart {
         padding: 0.5rem 0.7rem;
-        border: 1px solid var(--color-secundaria);
-        color: var(--color-secundaria);
+        border: 1px solid #FF5600;
+        color: #FF5600;
         background-color: transparent;
         border-radius: 50px;
     } 
-        .Tools .BtnCart:hover {
+        .Tools .Cart .BtnCart:hover {
             cursor: pointer;
             box-shadow: 0px 0px 7px 0px #324a64;
         } 
+    .Tools .Cart span {
+        font-family: 'Petrona';
+        font-size: 1.5em;
+        color: #FF5600;
+        font-weight: 800;
+        margin-left: 1vw;
+    }
 
     .Tools .SearchBar {
         display: flex;
@@ -80,9 +84,10 @@
         text-transform: capitalize;
     }
     .Tools .SearchBar button {
+        height: 31px;
         border: none;
         border-left: 1px solid #00142970;
-        padding: 0.1rem 0.2rem;
+        padding: 0 0.2rem;
         background-color: #fff;
     }
         .Tools .SearchBar button:hover {
@@ -103,3 +108,44 @@ footer {
         color: #B1B1B1;
         margin: 0 0.5vw;
     }
+
+@media (max-width: 768px) {
+    .App-Header nav ul li {
+        display: none;
+    }
+    .App-Header nav ul li.MobileNav {
+        display: block;
+    }
+    .App-Header nav .MobileNav .tr {
+        width: 30px;
+        height: 4px;
+        margin: 5px;
+        margin-left: 25vw;
+        background-color: #FF5600;
+    }
+    .Tools {
+        flex-direction: column-reverse;
+    }
+        .Tools .Cart {
+            align-self: flex-start;
+        }
+        .Tools .SearchBar {
+            margin-bottom: 5vh;
+        }
+            .Tools .SearchBar input {
+                width: 30vw;
+            }
+}
+
+@media (max-width: 455px) {
+    .App-Header {
+        padding: 0 20px;
+    }
+        .App-Header h1 {
+            font-size: 1.5em;
+        }
+
+    .Cover h2 {
+        font-size: 5em;
+    }
+}

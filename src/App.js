@@ -21,19 +21,17 @@ function App() {
     const [cartTotal, setCartTotal] = useState(0)
 
     function showProducts(textInput) {
-        setFilteredProducts([products.filter(product => product.name === textInput)]);
-        setProducts([filteredProducts]);
+        setProducts([products.filter(product => product.name === textInput)]);
         setTextInput("");
     }
 
     function handleClick(productId) {
         const currentProduct = products.find(product => product.id === productId);
         setCurrentSale([...currentSale, currentProduct]);
+        setCartTotal(currentSale.reduce((total, product) => total += product.price, 0));
     }
-
-    function showCart() {
-        setProducts([currentSale]);
-    }
+    console.log(currentSale);
+    console.log(cartTotal);
 
     return(
         <div className="App">
@@ -46,6 +44,11 @@ function App() {
                         <li>About</li>
                         <li>Menu</li>
                         <li>Contact</li>
+                        <li className="MobileNav">
+                            <div className="tr"></div>
+                            <div className="tr"></div>
+                            <div className="tr"></div>
+                        </li>
                     </ul>
                 </nav>
             </header>
@@ -55,14 +58,18 @@ function App() {
             </div>
 
             <div className="Tools">     
-                <button className="BtnCart" type="button" onClick={showCart}>
-                    <ShoppingCart style={{ fontSize: 35 }} />
-                </button>  
+                <div className="Cart">
+                    <button className="BtnCart" type="button">
+                        <ShoppingCart style={{ fontSize: 35 }} />
+                    </button> 
+                    <span>Total Price: ${cartTotal.toFixed(2)} </span>
+                </div>
+                 
 
                 <div className="SearchBar">
                     <input type="text" placeholder="search product"
-                        value={textInput}  
-                        onChange={(e) => setTextInput(e.target.value)} />
+                           value={textInput}  
+                           onChange={(e) => setTextInput(e.target.value)} />
                         
                     <button type="button" onClick={() => showProducts(textInput)}><Search/></button>
                 </div>

@@ -1,7 +1,7 @@
 import './style.css';
 import { Fragment } from 'react';
 
-function Product({ id, name, category, price }) {
+function Product({ name, category, price }) {
     return (
         <Fragment>
              <div className="Infos">

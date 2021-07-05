@@ -1,14 +1,12 @@
 import './style.css';
 import Product from "../Product";
-import { Fragment } from 'react';
 
 function MenuContainer({ products, handleClick }) {    
     return(
         <div className="Products">
             { products.map(product => 
-                <div className="DivProduct">
-                    <Product key={product.id}
-                             name={product.name}
+                <div key={product.id} className="DivProduct">
+                    <Product name={product.name}
                              category={product.category}
                              price={product.price}
                              handleClick={handleClick}/>
