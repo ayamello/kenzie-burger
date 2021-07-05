@@ -1,3 +1,4 @@
+import './style.css';
 import Product from "../Product";
 
 function MenuContainer({ products, handleClick }) {    

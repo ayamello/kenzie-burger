@@ -1,10 +1,12 @@
+import './style.css';
+
 function Product({ id, name, category, price, handleClick }) {
     return (
-        <div className="divProduct">
+        <div className="DivProduct">
              <div className="Infos">
-                <p>{name}</p>
+                <h3>{name}</h3>
                 <p>Category: {category}</p>
-                <p>Price: ${price}</p>
+                <span>Price: ${price}</span>
             </div>
 
             <div className="BtnAddCart">

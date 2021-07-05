@@ -1,7 +1,7 @@
 :root {
     --color-primaria: #001429;
     --color-secundaria: #FF5600;
-  }
+}
 
 .App-Header {
     display: flex;
@@ -42,27 +42,28 @@
     }
 
     .Tools {
-        height: 15vh;
+        width: 80%;
+        margin: 3vw auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
     }
 
     .Tools .BtnCart {
-        float: right;
-        margin-right: 2vw;
         padding: 0.5rem 0.7rem;
-        border: none;
+        border: 1px solid var(--color-secundaria);
         color: var(--color-secundaria);
         background-color: transparent;
         border-radius: 50px;
     } 
-        .Tools .BtnCart {
+        .Tools .BtnCart:hover {
             cursor: pointer;
+            box-shadow: 0px 0px 7px 0px #324a64;
         } 
 
     .Tools .SearchBar {
         display: flex;
         align-items: center;
-        justify-content: flex-end;
-        margin: 2vh 2vw;
     }
 
     .Tools .SearchBar input {

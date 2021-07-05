@@ -50,16 +50,18 @@ function App() {
                 <h2>Menu</h2>
             </div>
 
-            <div className="Tools">                
+            <div className="Tools">     
+                <button className="BtnCart" type="button">
+                    <ShoppingCartIcon style={{ fontSize: 35 }} />
+                </button>  
+
                 <div className="SearchBar">
                     <input type="text" placeholder="search product"
                         value={textInput}  
                         onChange={(e) => setTextInput(e.target.value)} />
                         
-                    <button type="button"><SearchIcon/></button>
+                    <button type="button" onClick={() => showProducts(textInput)}><SearchIcon/></button>
                 </div>
-
-                <button className="BtnCart" type="button"><ShoppingCartIcon style={{ fontSize: 35 }} /></button>
             </div>
 
             <MenuContainer products={products} handleClick={handleClick} />
