@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import './App.css';
 import SearchIcon from '@material-ui/icons/Search';
+import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
 import MenuContainer from './components/MenuContainer';
 
 function App() {
@@ -45,15 +46,20 @@ function App() {
                 </nav>
             </header>
 
-            <div>
+            <div className="Cover">
                 <h2>Menu</h2>
+            </div>
 
-                <div>
+            <div className="Tools">                
+                <div className="SearchBar">
                     <input type="text" placeholder="search product"
-                           value={textInput}  
-                           onChange={(e) => setTextInput(e.target.value)} />
-                    <SearchIcon/>
+                        value={textInput}  
+                        onChange={(e) => setTextInput(e.target.value)} />
+                        
+                    <button type="button"><SearchIcon/></button>
                 </div>
+
+                <button className="BtnCart" type="button"><ShoppingCartIcon style={{ fontSize: 35 }} /></button>
             </div>
 
             <MenuContainer products={products} handleClick={handleClick} />

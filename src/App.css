@@ -1,0 +1,81 @@
+:root {
+    --color-primaria: #001429;
+    --color-secundaria: #FF5600;
+  }
+
+.App-Header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #FF5600;
+    padding: 5px 20px;
+    border-bottom: 1px solid #ff550077;
+}
+    .App-Header h1 {
+        font-family: 'Ribeye';
+    }
+    .App-Header nav {
+        width: 30%;
+        font-family: 'Petrona';
+    }
+    .App-Header nav ul {
+        list-style-type: none;
+        display: flex;
+        justify-content: space-around;
+    }
+
+.Cover {
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to bottom, rgba(0, 20, 41, 0.5), rgba(0, 20, 41, 0.5)), url(./assets/images/burger.jpg);
+    background-size: cover;
+}
+    .Cover h2 {
+        color: #fff;
+        font-size: 8em;
+        font-family: 'Petrona';
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    .Tools {
+        height: 15vh;
+    }
+
+    .Tools .BtnCart {
+        float: right;
+        margin-right: 2vw;
+        padding: 0.5rem 0.7rem;
+        border: none;
+        color: var(--color-secundaria);
+        background-color: transparent;
+        border-radius: 50px;
+    } 
+        .Tools .BtnCart {
+            cursor: pointer;
+        } 
+
+    .Tools .SearchBar {
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        margin: 2vh 2vw;
+    }
+
+    .Tools .SearchBar input {
+        width: 20vw;
+        padding: 0.5rem;
+        border: none;
+    }
+    .Tools .SearchBar button {
+        border: none;
+        border-left: 1px solid #00142970;
+        padding: 0.1rem 0.2rem;
+        background-color: #fff;
+    }
+        .Tools .SearchBar button:hover {
+            cursor: pointer;
+        }
