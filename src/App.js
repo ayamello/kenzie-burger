@@ -1,7 +1,6 @@
 import { useState } from 'react';
 import './App.css';
-import SearchIcon from '@material-ui/icons/Search';
-import ShoppingCartIcon from '@material-ui/icons/ShoppingCart';
+import { Search, ShoppingCart, LinkedIn, GitHub } from '@material-ui/icons';
 import MenuContainer from './components/MenuContainer';
 
 function App() {
@@ -56,7 +55,7 @@ function App() {
 
             <div className="Tools">     
                 <button className="BtnCart" type="button" onClick={showCart}>
-                    <ShoppingCartIcon style={{ fontSize: 35 }} />
+                    <ShoppingCart style={{ fontSize: 35 }} />
                 </button>  
 
                 <div className="SearchBar">
@@ -64,14 +63,18 @@ function App() {
                         value={textInput}  
                         onChange={(e) => setTextInput(e.target.value)} />
                         
-                    <button type="button" onClick={() => showProducts(textInput)}><SearchIcon/></button>
+                    <button type="button" onClick={() => showProducts(textInput)}><Search/></button>
                 </div>
             </div>
 
             <MenuContainer products={products} handleClick={handleClick} />
 
             <footer>
-                <span>&copy; dev@ Ayana Mello</span>
+                <p>Developed by Ayana Mello</p>
+                <div className="DevSocial">
+                    <a href="https://www.linkedin.com/in/ayana-mello/"><LinkedIn/></a>
+                    <a href="https://github.com/ayanamello"><GitHub/></a>
+                </div>
             </footer>
         </div>
     );
