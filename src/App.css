@@ -77,6 +77,7 @@
         width: 20vw;
         padding: 0.5rem;
         border: none;
+        text-transform: capitalize;
     }
     .Tools .SearchBar button {
         border: none;

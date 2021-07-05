@@ -22,13 +22,17 @@ function App() {
     const [cartTotal, setCartTotal] = useState(0)
 
     function showProducts(textInput) {
-        setFilteredProducts([products.filter(product => product.name === textInput)]);
+        setProducts([products.filter(product => product.name === textInput)]);
         setTextInput("");
     }
 
     function handleClick(productId) {
         const currentProduct = products.find(product => product.id === productId);
         setCurrentSale([...currentSale, currentProduct]);
+    }
+
+    function showCart() {
+        setProducts([currentSale]);
     }
 
     return(
@@ -51,7 +55,7 @@ function App() {
             </div>
 
             <div className="Tools">     
-                <button className="BtnCart" type="button">
+                <button className="BtnCart" type="button" onClick={showCart}>
                     <ShoppingCartIcon style={{ fontSize: 35 }} />
                 </button>  
 
