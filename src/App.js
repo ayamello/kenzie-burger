@@ -65,7 +65,7 @@ function App() {
             <div className="Tools">     
                 <div className="Cart">
                     <button className="BtnCart" type="button">
-                        <ShoppingCart style={{ fontSize: 35 }} />
+                        <ShoppingCart />
                     </button> 
                     <span>Total Price: ${cartTotal.toFixed(2)} </span>
                 </div>

@@ -123,22 +123,29 @@ footer {
         margin-left: 25vw;
         background-color: #FF5600;
     }
-    .Tools {
-        flex-direction: column-reverse;
+    .Tools .SearchBar {
+        margin-top: 2vh;
+        align-self: flex-start;
     }
-        .Tools .Cart {
-            align-self: flex-start;
+        .Tools .SearchBar input {
+            width: 30vw;
         }
-        .Tools .SearchBar {
-            margin-bottom: 2vh;
-            align-self: flex-end;
-        }
-            .Tools .SearchBar input {
-                width: 30vw;
-            }
 }
 
-@media (max-width: 455px) {
+@media (max-width: 635px) {
+    .Tools .Cart {
+        display: flex;
+        flex-direction: column;
+    }
+        .Tools .Cart .BtnCart {
+            width: 50px;
+            font-size: 16px;
+            background-color: transparent;
+            border-radius: 50px;
+        } 
+}
+
+@media (max-width: 475px) {
     .App-Header {
         padding: 0 20px;
     }
@@ -148,5 +155,18 @@ footer {
 
     .Cover h2 {
         font-size: 5em;
+    }
+
+    .Tools .Cart span {
+        font-size: 1.2em;
+    }
+    .Tools .Cart .BtnCart {
+        font-size: small;
+    } 
+}
+
+@media (max-width: 389px) {
+    .Tools .Cart span {
+        font-size: 0.9em;
     }
 }
