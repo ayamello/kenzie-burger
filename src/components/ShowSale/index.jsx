@@ -2,7 +2,6 @@ import './style.css';
 
 function ShowSale(props) {
     const cart = props.cart
-    console.log(cart)
     return (
         <div className="CurrentCart">
             {cart.map(item => 

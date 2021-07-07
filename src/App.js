@@ -21,14 +21,13 @@ function App() {
     const [currentSale, setCurrentSale] = useState([]);
     const [cartTotal, setCartTotal] = useState(0);
 
-    //a revisar - não funciona
     function showProducts(textInput) {
-        const filter = products.filter(product => product.name === textInput);
-        setFilteredProducts([filter]);
+        const filter = products.filter(product => product.name.toLowerCase() === textInput);
+        setFilteredProducts(filter);
         setTextInput("");
-        setProducts(filteredProducts);
     }
-    
+    console.log(filteredProducts);
+
     function handleClick(productId) {
         const currentProduct = products.find(product => product.id === productId);
         const currentTotal = currentSale.reduce((total, product) => total += product.price, currentProduct.price);
@@ -82,7 +81,11 @@ function App() {
             
             <ShowSale cart={currentSale} />
 
-            <MenuContainer products={products} handleClick={handleClick} />
+            { filteredProducts.length > 0 ? (
+                <MenuContainer products={filteredProducts} handleClick={handleClick} />
+            ) : (
+                <MenuContainer products={products} handleClick={handleClick} />
+            )}
 
             <footer>
                 <p>Developed by Ayana Mello</p>
